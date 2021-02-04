@@ -1,0 +1,59 @@
+.partner
+    padding: 73px 0
+    background-image: url('../images/section-partner-bg.jpg')
+    background-repeat: no-repeat
+    background-position: left center 
+    background-size: 100%
+    &__content
+        padding: 163px 0 95px 0
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    &__subtitle
+        margin-bottom: 18px
+        color: $pr
+    &__title 
+        margin-bottom: 37px
+        font-weight: bold
+        font-size: calc((100vw * 0.1) / 3.4)
+        color: $pr
+    &__descr 
+        margin-bottom: 58px
+        max-width: 750px
+        color: $pr
+        line-height: 20px
+        text-align: center 
+    &__btn
+        .btn
+            display: flex
+
+@media screen and ( min-width: 1690px )
+    .partner__title
+        font-size: 48px
+
+@media screen and ( max-width: 1100px )
+    .partner__content 
+        padding: 10px 0 28px 0 
+
+@media screen and ( max-width: 991px )
+    .partner
+        padding: 0
+        background-image: url('../images/section-partner-bg-2.png')
+        background-size: contain 
+    .partner__subtitle
+        display: none
+
+@media screen and ( max-width: 768px )
+    .partner__content
+        align-items: flex-end 
+    .partner__title
+        font-size: 24px
+    .partner__descr
+        padding-left: 140px
+        text-align: right
+    .partner__btn
+        width: 100%
+        text-align: center
+        .btn 
+            display: inline

@@ -1,0 +1,72 @@
+.schedule
+    padding: 100px 0
+    &-list
+        width: 100%
+    &__title
+        margin-bottom: 15px
+        text-align: center
+        font-size: 24px
+        font-weight: normal
+        color: $pr
+    &-btn
+        padding-left: 56px
+        padding-right: 56px
+        text-transform: uppercase
+    &__descr
+        padding: 0 100px
+        margin-bottom: 25px
+        p 
+            color: $pr
+        p:not(:last-child)
+            padding-bottom: 15px
+    &__body
+        padding: 0 0 0 100px
+    &__top
+        margin-bottom: 10px
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        span 
+            font-size: 24px
+            color: $pr
+
+
+@media screen and ( max-width: 1100px )
+    .schedule__descr
+        padding: 0 30px
+    .schedule__body
+        padding: 0
+    .schedule
+        padding-top: 35px
+        padding-bottom: 40px
+
+@media screen and ( max-width: 991px )
+    .schedule__descr
+        display: none
+
+@media screen and ( max-width: 768px )
+    .schedule-list 
+        .table-row.table-row-head
+            display: none
+        .table-row,
+        .table-col
+            padding-right: 0
+            display: flex 
+            flex-wrap: wrap 
+        .table-col.name 
+            width: 100%
+        .table-col.link
+            margin: auto 
+        .table-col.city
+            margin-right: 24px
+            order: -1
+        .table-col.date
+            font-weight: bold
+    .schedule__top
+        margin-bottom: 60px
+        display: flex
+        flex-direction: column
+        align-items: center
+        span 
+            font-size: 14px
+            margin-bottom: 18px

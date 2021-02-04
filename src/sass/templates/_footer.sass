@@ -1,0 +1,43 @@
+.footer
+    background-color: $pr
+    &-copy
+        padding-bottom: 25px
+        text-align: center
+        color: #ffffff
+    &__content
+        padding: 100px 0 55px 0
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &-logo
+        width: 152px
+        img 
+            width: 100%
+    &-contacts
+        display: flex
+        flex-direction: column
+        &__addr
+            margin-bottom: 15px
+            color: #FFFFFF
+            address
+                font-style: normal
+        &__tel
+            margin-bottom: 15px
+            a 
+                display: block
+                color: #ffffff
+        &__email
+            a 
+                color: #ffffff
+
+
+@media screen and ( max-width: 768px )
+    .footer__content 
+        padding: 50px 0 25px 0
+    .footer
+        &-logo
+            width: 95px
+    .footer-contacts__addr address,
+    .footer-contacts__tel,
+    .footer-contacts__email
+        text-align: right

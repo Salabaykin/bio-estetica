@@ -1,0 +1,52 @@
+.company
+    padding: 95px 0 130px 0
+    &-slider
+        &-item
+            position: relative
+            height: 555px
+            background-image: 
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover 
+    &__wrap
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: calc(100vw * 0.11)
+        max-width: 410px
+    &__title
+        display: block
+        text-align: right
+        font-weight: bold
+        font-size: 48px
+        line-height: 59px
+        color: #FFFFFF
+    &__descr
+        display: block
+        text-align: right
+        line-height: 25px
+        color: #FFFFFF
+    &__link
+        margin-top: 60px
+    &__btn
+        display: inline-flex
+
+.company__title--color,
+.company__descr--color
+    color: $pr
+
+
+@media screen and ( max-width: 991px )
+    .company
+        padding: 0
+        &-slider
+            &-item
+                background-position: -600px center 
+    .company__wrap 
+        top: 70%
+    .company__link
+        margin-top: 35px
+        display: flex
+        justify-content: flex-end
+    .company__title
+        max-width: 250px

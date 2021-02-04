@@ -1,0 +1,128 @@
+.modal
+    display: none
+    position: fixed
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    overflow: hidden
+    overflow-y: auto
+    -webkit-overflow-scrolling: touch
+    flex-flow: column nowrap
+    align-items: center
+    justify-content: flex-start
+    margin: auto
+    z-index: 10
+    opacity: 0
+    animation: animated 0.3s ease
+    &__window
+        padding: 30px 15px
+        flex-shrink: 0
+        flex-grow: 0
+        width: 100%
+        min-height: 100%
+        display: flex
+        flex-flow: column nowrap
+        align-items: center
+        justify-content: center
+        background: rgba(0,0,0,0.5)
+    &-close
+        position: absolute
+        top: 0
+        right: 0
+        width: 35px
+        height: 35px
+        color: $pr
+        background: transparent 
+        font-size: 17px
+        border: none
+        line-height: 1
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        transition: background-color 0.3s
+    &__content
+        position: relative
+        padding: 125px 90px
+        background: #ffffff
+        max-width: 1020px
+        border: 1px solid #61B4B8
+        border-radius: 8px
+
+.modal.modal-open
+    display: block
+    opacity: 1
+
+.hidden
+    overflow: hidden
+
+@keyframes animated
+    0% 
+        opacity: 0
+    100% 
+        opacity: 1
+
+.modal-form
+    &__txt
+        margin-bottom: 45px
+        font-size: 24px
+        color: $pr
+    &__body
+        display: flex
+        flex-wrap: wrap
+    &__input:nth-child(even)
+        padding-right: 35px
+    &__input
+        flex-basis: 50%
+        display: flex
+        align-items: center
+        margin-bottom: 15px
+        input 
+            width: 100%
+            height: 45px
+            padding: 0 12px
+            background: #FFFFFF
+            border: 1px solid #61B4B8
+            border-radius: 8px
+    &__name
+        flex-basis: 100%
+        input
+            width: 100%
+    &__submit
+        margin-top: 10px
+        text-align: right
+
+input::-moz-placeholder 
+    color: #61B4B8
+
+input::-webkit-input-placeholder
+    color: #61B4B8
+
+input:-ms-input-placeholder 
+    color: #61B4B8
+
+input::-ms-input-placeholder
+    color: #61B4B8
+
+input::placeholder 
+    color: #61B4B8
+
+
+@media screen and ( max-width: 768px )
+    .modal-form__input
+        flex-basis: 100% !important
+        padding: 0 !important
+    .modal__content
+        padding: 50px
+    .modal-form__txt 
+        margin-bottom: 25px
+        font-size: 16px
+    
+@media screen and ( max-width: 430px )
+    .modal-form__submit
+        .btn 
+            width: 100%
+            padding: 17px
+    .modal__content
+        padding: 35px 20px
