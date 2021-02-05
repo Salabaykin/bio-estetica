@@ -1,0 +1,58 @@
+.pagination
+    &-list
+        display: flex
+        align-items: center
+        justify-content: center
+        li 
+            margin-right: 10px
+            &:last-child
+                margin-right: 0
+            a 
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 36px
+                height: 36px
+                color: $pr
+                font-weight: bold;
+                border: 1px solid #61B4B8
+                border-radius: 8px
+                line-height: 1
+                transition: all 0.2s
+                &:hover
+                    background: $pr
+                    color: #ffffff
+            .pagination-prev,
+            .pagination-next 
+                position: relative
+                background: transparent
+                &:hover
+                    background: transparent
+            .pagination-prev 
+                i 
+                    width: 22px
+                    height: 22px
+                    background: url('../images/icons/pagination-prev.png')
+            .pagination-next 
+                i 
+                    width: 22px
+                    height: 22px
+                    background: url('../images/icons/pagination-next.png')
+        .pagination-point
+            display: block
+            width: 31px
+            height: 7px
+            background: url('../images/news/point.svg')
+            background-repeat: no-repeat
+            background-size: cover 
+            
+
+.pagination-list li a.active 
+    background: $pr
+    color: #ffffff
+
+@media screen and ( max-width: 1024px )
+    .pagination-list li a
+        width: 30px
+        height: 30px
+        font-size: 12px
