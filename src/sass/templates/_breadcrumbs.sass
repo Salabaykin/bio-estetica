@@ -1,0 +1,17 @@
+.breadcrumbs
+    &__list
+        li 
+            position: relative
+            display: inline
+            margin-right: 5px
+            padding-right: 15px
+            &::after
+                content: '-'
+                position: absolute
+                top: 50% 
+                transform: translateY(-50%)
+                right: 0
+                width: 5px  
+            &:last-child
+                &::after
+                    display: none

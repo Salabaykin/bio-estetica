@@ -1,0 +1,40 @@
+.accordion
+    &-item
+        margin-bottom: 10px
+        &__header 
+            position: relative
+            color: #848484
+            cursor: pointer
+            transition: all 0.2s
+            &::after
+                transition: all 0.2s
+                content: ''
+                position: absolute
+                top: 50%
+                right: 0
+                transform: translateY(-50%)
+                width: 13px
+                height: 8px
+                background: url('../images/icons/accordion-arrow.svg')
+                background-size: cover 
+        &__content 
+            transition: opacity .4s ease
+            visibility: hidden
+            max-height: 0
+            opacity: 0
+        &__link:not(:last-child)
+            margin-bottom: 5px
+
+.accordion-item.show .accordion-item__content 
+    padding: 10px 0 0 40px 
+    visibility: visible
+    max-height: 100%
+    overflow: auto !important
+    opacity: 1
+
+.accordion-item.show .accordion-item__header 
+    transition: all 0.2s
+    &::after
+        transition: all 0.2s
+        transform-origin: center 
+        transform: translateY(-50%) rotate(180deg)

@@ -89,4 +89,34 @@ document.addEventListener("DOMContentLoaded", function() {
     overlay.classList.remove('active');
   })
 
+  // Accordion
+  class Accordion {
+    constructor(id, header) {
+      this.header = header;
+      this.id = id;
+      this.render();
+    }
+    render() {
+      function initAccordion(element, header) {
+        const mainElement = document.querySelector(element);
+        function actionClick(e) {
+          if (!e.target.classList.contains(header)) {
+            return;
+          }
+          e.preventDefault();
+          const headerHead = e.target;
+          const item = headerHead.parentElement;
+          item.classList.toggle('show');
+        };
+        function setupListeners() {
+          mainElement.addEventListener('click', actionClick);
+        }
+        if (mainElement) {
+          setupListeners();
+        }
+      }
+      initAccordion(this.id, this.header);
+    }
+  }
+  const libraryAccordion = new Accordion('#accordion', 'accordion-item__header');
 });

@@ -1,0 +1,86 @@
+.category
+    padding: 85px 0
+    &__content
+        display: flex
+    &-aside
+        width: 280px
+    &-body
+        margin-left: 19px
+        flex: 1
+    &-list
+        margin-bottom: 70px;
+        display: flex;
+        justify-content: space-between;
+    &-card
+        margin: 0 5px;
+        padding: 55px 12px 20px 12px;
+        background: #FFFFFF
+        border: 1px solid #61B4B8
+        border-radius: 8px
+        &__img 
+            width: 100%;
+            img 
+                width: 100%;
+        &__txt
+            padding-top: 60px;
+            text-align: center;
+            a 
+                color: $pr
+        &:hover
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15)
+    &-content
+        p:not(:last-child)
+            margin-bottom: 20px;
+            color: #848484
+        ul 
+            margin-bottom: 20px;
+            li 
+                list-style: disc;
+                margin-left: 18px
+                color: #848484
+        &-link
+            position: relative;
+            padding: 22px 25px 22px 80px;
+            background-color: $pr
+            border-radius: 8px
+            font-size: 13px
+            color: #ffffff
+            a 
+                color: #ffffff
+                font-weight: bold;
+            &::before
+                content: ''
+                position: absolute;
+                top: 50%;
+                left: 18px;
+                transform: translateY(-50%)
+                width: 47px;
+                height: 47px;
+                background: url('../images/category/category-content-link-icon.png')
+                background-size: cover 
+
+
+@media screen and ( max-width: 991px )
+    .category__content
+        flex-direction: column;
+    .category-body
+        margin-left: 0;
+    .category-aside
+        width: 100%;
+        margin-bottom: 40px;
+    .category
+        padding: 20px 0;
+    .category-list
+        margin-bottom: 30px;
+
+@media screen and ( max-width: 768px )
+    .category-list
+        flex-direction: column;
+    .category-card
+        margin-bottom: 17px;
+    .category-card
+        padding-top: 0;
+    .category-card__txt
+        padding-top: 10px;
+    .category-content-link
+        text-align: right;
