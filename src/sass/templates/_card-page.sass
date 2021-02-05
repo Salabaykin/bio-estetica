@@ -1,0 +1,105 @@
+.card-page
+    padding: 85px 0;
+    &__wrap
+        margin-bottom: 65px;
+        display: flex;
+    &-gallery
+        width: 40%;
+        .gallery-top
+            padding-bottom: 10px;
+            .swiper-slide
+                position: relative;
+                height: 275px;
+                background-repeat: no-repeat
+                background-size: 80%
+                background-position: center center
+                &::before
+                    content: ''
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-radius: 8px
+                    border: 1px solid #61B4B8
+        .gallery-thumbs
+            .swiper-slide 
+                position: relative;
+                height: 80px;
+                background-repeat: no-repeat
+                background-size: 85%
+                background-position: center center
+                &::before
+                    content: ''
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-radius: 8px
+                    border: 1px solid #61B4B8
+
+    &__descr
+        padding-left: 25px;
+        width: 60%;
+    &__title
+        margin-bottom: 20px;
+        font-weight: normal
+        font-size: 18px
+        color: #848484
+    &__txt 
+        font-size: 14px
+        color: #848484
+
+.card-table
+    margin-bottom: 65px;
+    &-row:nth-child(odd)
+        background: $pr
+        .card-table-col
+            color: #fff
+    &-row
+        display: flex;
+        padding: 10px 30px;
+    &-col
+        flex-basis: 50%;
+        color: #848484
+        ul 
+            margin-bottom: 20px;
+            li 
+                list-style: disc;
+                margin-left: 18px
+                color: #848484
+
+
+@media screen and ( max-width: 768px )
+    .card-page
+        padding: 25px 0;
+    .card-page__wrap
+        margin-bottom: 20px;
+        flex-direction: column;
+    .card-page-gallery,
+    .card-page__descr
+        width: 100%;
+    .card-page-gallery
+        margin-bottom: 25px;
+    .card-page__descr
+        padding-left: 0;
+    .card-table-row
+        flex-direction: column;
+        .card-table-col:nth-child(1)
+            font-weight: bold;
+    .card-page__info
+        margin-left: -15px;
+        margin-right: -15px;
+        .content-link
+            text-align: right;
+            margin-left: 15px;
+            margin-right: 15px;
+    .card-table
+        margin-bottom: 25px;
+
+@media screen and ( max-width: 460px )
+    .card-page-gallery
+        .gallery-thumbs
+            .swiper-slide 
+                height: 60px;

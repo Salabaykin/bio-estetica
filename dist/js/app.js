@@ -11,12 +11,32 @@ document.addEventListener("DOMContentLoaded", function() {
       },
     }
   });
+
   const companySwiper = new Swiper('.company-slider.swiper-container', {
     loop: true,
     autoplay: {
       delay: 3500,
     },
     navigation: false
+  });
+
+  var galleryThumbs = new Swiper('.swiper-container.gallery-thumbs', {
+    loop: false,
+    freeMode: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    loopedSlides: 4, //looped slides should be the same
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  });
+
+  var galleryTop = new Swiper('.swiper-container.gallery-top', {
+    spaceBetween: 10,
+    loop: false,
+    loopedSlides: 4, //looped slides should be the same
+    thumbs: {
+      swiper: galleryThumbs,
+    },
   });
 
   // Modal 
