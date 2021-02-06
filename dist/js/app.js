@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+  'use strict';
+
   const promoSwiper = new Swiper('.promo-slider.swiper-container', {
     loop: false,
     breakpoints: {
@@ -139,4 +141,24 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
   const libraryAccordion = new Accordion('#accordion', 'accordion-item__header');
+
+  // Link scroll
+  const navLink = document.querySelectorAll('.question-nav ul li a[href^="#"]');
+
+  if (navLink.length > 0) {
+    navLink.forEach(link => {
+      link.addEventListener('click', function(e) {
+          e.preventDefault();
+          let href = this.getAttribute('href').substring(1);
+          const scrollTarget = document.getElementById(href);
+          const elementPosition = scrollTarget.getBoundingClientRect().top;
+          const offsetPosition = elementPosition - 20;
+          window.scrollBy({
+              top: offsetPosition,
+              behavior: 'smooth'
+          });
+      });
+    });
+  }
+
 });
