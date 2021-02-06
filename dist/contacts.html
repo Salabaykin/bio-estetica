@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/glightbox.min.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css" />
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=eb8d988f-234c-49da-9e01-9088befd05b1" type="text/javascript"></script>
 </head>
 <body>
 
@@ -75,7 +76,17 @@
             <!-- /.container -->
 
             <div class="map">
-                Карта
+                <div class="map-head">
+                    <div class="map-head__txt">Наши дистрибьюторы</div>
+                    <div class="map-head__select">
+                        <select name="map-city">
+                            <option value="Выберите город">Выберите город</option>
+                            <option value="Москва">Москва</option>
+                            <option value="Казань">Казань</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="map"></div>
             </div>
 
             <div class="container">

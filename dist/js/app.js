@@ -2,6 +2,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
   'use strict';
 
+  var myMap;
+  ymaps.ready(init);
+  function init () {
+      myMap = new ymaps.Map('map', {
+          center: [55.76, 37.64], 
+          zoom: 10,
+          controls: []
+      }, {
+          searchControlProvider: 'yandex#search'
+      });
+  }
+
   const promoSwiper = new Swiper('.promo-slider.swiper-container', {
     loop: false,
     breakpoints: {
