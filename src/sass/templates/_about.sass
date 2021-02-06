@@ -1,0 +1,159 @@
+.about
+    padding: 40px 0 100px 0;
+    &__body 
+        display: flex;
+        flex-direction: column
+    &__title 
+        font-weight: normal;
+        font-size: 24px
+        color: $pr
+        margin-bottom: 20px;
+    &__video
+        position: relative;
+        margin-bottom: 16px;
+        max-height: 580px
+        &::before
+            content: ''
+            position: absolute;
+            z-index: 7;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../images/video.jpg')
+            background-size: cover 
+            background-position: center 
+            cursor: pointer;
+        .video-block
+            width: 100%;
+            max-height: 580px
+    &__txt
+        margin-bottom: 35px;
+        span 
+            display: block;
+            font-size: 24px
+            color: $pr
+        p 
+            padding-top: 30px;
+            color: $pr
+    &__documents
+        margin-bottom: 140px;
+        span 
+            display: block;
+            margin-bottom: 80px;
+            font-size: 24px
+            color: $pr
+    &-slider 
+        .swiper-button-next:after, 
+        .swiper-button-prev:after
+            display: none
+        .swiper-button-next
+            right: 0
+        .swiper-button-prev
+            left: 0
+        .swiper-button-next,
+        .swiper-button-prev
+            width: 56px
+            height: 56px
+            background: rgba(255, 255, 255, 0.7)
+        .swiper-button-prev
+            img 
+                transform: rotate(180deg)
+        .swiper-slide
+            a 
+                width: 100%;
+                display: block;
+                img 
+                    width: 100%;
+    &-block:not(:last-child)
+        margin-bottom: 180px;
+    &-block
+        display: flex;
+        &__btn
+            margin-top: 65px;
+            display: flex;
+            justify-content: flex-end;
+            .btn 
+                padding: 19px 25px;
+                text-transform: capitalize;
+        &__descr
+            max-width: 430px;
+            span 
+                display: block;
+                font-size: 18px
+                color: $pr
+        &__title 
+            font-weight: bold;
+            font-size: 24px
+            color: $pr
+            margin-top: 100px;
+            margin-bottom: 5px;
+        &__txt
+            color: $pr 
+            span 
+                font-size: 14px;
+                margin-top: 25px;
+                display: block;
+                font-weight: bold;
+        &__img
+            display: flex;
+            align-items: center
+            flex: 1
+            padding-left: 50px;
+            img 
+                width: 100%;
+
+.about__video.hide
+    &::before
+        display: none;
+
+.about-block__btn-mob
+    display: none;
+
+
+@media screen and ( max-width: 991px )
+    .about__documents
+        display: none;
+    .about-block__descr 
+        max-width: 330px
+
+@media screen and ( max-width: 768px )
+    .about
+        padding: 30px 0 40px 0;
+    .about__title
+        font-size: 14px;
+        margin-bottom: 10px;
+    .about__txt
+        margin-bottom: 10px;
+        span 
+            font-weight: bold;
+            font-size: 14px;
+        p 
+            padding-top: 10px;
+    .about-block
+        flex-direction: column;
+    .about-block.mb-60
+        margin-bottom: 60px;
+    .about-block:not(:last-child)
+        margin-bottom: 0;
+    .about-block.about-block-order
+        order: 2
+    .about-block__descr
+        max-width: 100%
+    .about-block__title
+        margin-top: 7px
+    .about-block__img
+        padding-left: 0;
+    .about-block__btn
+        display: none;
+    .about-block__img
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        .about-block__btn-mob
+            display: block;
+            margin-top: 10px;
+            .btn 
+                text-transform: capitalize;

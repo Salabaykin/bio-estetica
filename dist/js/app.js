@@ -161,4 +161,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
+  const aboutSwiper = new Swiper('.about-slider.swiper-container', {
+    loop: false,
+    slidesPerView: 6,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  const lightbox = GLightbox({
+    touchNavigation: true,
+    loop: true,
+  });
+
+  // Video 
+  const playBlock = document.querySelector('.about__video'), 
+        videoBlock = document.getElementById('video-block');
+
+  playBlock.addEventListener('click', () => {
+    videoBlock.play();
+    playBlock.classList.add('hide');
+  })
+
 });
