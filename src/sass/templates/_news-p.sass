@@ -1,0 +1,70 @@
+.news-p
+    padding: 40px 0 85px 0;
+    &__title
+        margin-bottom: 75px;
+        font-weight: normal
+        font-size: 24px
+        text-align: center
+        color: $pr 
+    &__img
+        width: 100%;
+        img 
+            width: 100%;
+    &__body
+        padding: 0 100px;
+        margin-top: 38px;
+        p 
+            margin-bottom: 25px;
+            color: #848484
+        .gallery
+            display: flex;
+            margin-left: -100px;
+            margin-right: -100px;
+            &__item
+                width: 100%;
+                img 
+                    width: 100%;
+        blockquote
+            margin-left: 50px;
+            padding-left: 25px;
+            margin-bottom: 47px;
+            margin-top: 47px;
+            position: relative;
+            font-style: italic
+            font-size: 18px;
+            &::before
+                content: ''
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 5px;
+                height: 100%;
+                background: $pr
+        table
+            margin-bottom: 60px;
+            color: #848484
+            tr 
+                td
+                    margin-right: 75px;
+        h3, h4, h5, h6
+            color: $pr
+            margin-bottom: 20px;
+        h3 
+            font-size: 24px
+        h4 
+            font-size: 22px
+        h5 
+            font-size: 18px
+        h6 
+            font-size: 14px
+
+
+@media screen and ( max-width: 991px )
+    .news-p
+        padding: 25px 0 25px 0;
+    .news-p__title
+        margin-bottom: 25px;
+    .news-p__body
+        padding: 0;
+    .news-p__body .gallery
+        margin: 0;
