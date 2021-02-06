@@ -180,9 +180,11 @@ document.addEventListener("DOMContentLoaded", function() {
   const playBlock = document.querySelector('.about__video'), 
         videoBlock = document.getElementById('video-block');
 
-  playBlock.addEventListener('click', () => {
-    videoBlock.play();
-    playBlock.classList.add('hide');
-  })
+  if (playBlock) {
+    playBlock.addEventListener('click', () => {
+      videoBlock.play();
+      playBlock.classList.add('hide');
+    })
+  }
 
 });

@@ -63,7 +63,7 @@
     100% 
         opacity: 1
 
-.modal-form
+.form
     &__txt
         margin-bottom: 45px
         font-size: 24px
@@ -85,10 +85,14 @@
             background: #FFFFFF
             border: 1px solid #61B4B8
             border-radius: 8px
-    &__name
+    &__name,
+    &__company-name,
+    &__address-site
         flex-basis: 100%
         input
             width: 100%
+    &__company-name
+        padding-right: 0 !important
     &__submit
         margin-top: 10px
         text-align: right
@@ -110,17 +114,17 @@ input::placeholder
 
 
 @media screen and ( max-width: 768px )
-    .modal-form__input
+    .form__input
         flex-basis: 100% !important
         padding: 0 !important
     .modal__content
         padding: 50px
-    .modal-form__txt 
+    .form__txt 
         margin-bottom: 25px
         font-size: 16px
     
 @media screen and ( max-width: 430px )
-    .modal-form__submit
+    .form__submit
         .btn 
             width: 100%
             padding: 17px
